@@ -1,6 +1,6 @@
 const express = require("express");
 const Router = express.Router();
-const listing = require("../Models/listing.JS");
+const listing = require("../Models/listing.js");
 const {isOwner}= require("../utils/isOwner")
 const listingsController =require("../controller/listing.js")
 const multer = require("multer");
