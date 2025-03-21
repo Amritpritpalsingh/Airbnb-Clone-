@@ -1,0 +1,85 @@
+<%- layout("/layouts/bolierplate.ejs") %>
+<body>
+    <div class="container me-2 mt-1">
+        <h1>Take Your Chance </h1>
+        <form action="/listing/<%= userData._id%>?Method=PUT" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+
+            <div class="col-lg-6 col-md-6 col-sm-8 col-8">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="title" value="<%= userData.title %>" class="form-control" required>
+                <div class="valid-feedback">
+                    Great Title Dear
+                </div>
+                <div class="invalid-feedback">
+                    Please Enter The Title
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-6 col-md-6 col-sm-8 col-8">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="description" id=""  value="" class="form-control" required><%= userData.description %> </textarea>
+                <div class="valid-feedback">
+                    Great Description Dear
+                </div>
+                <div class="invalid-feedback">
+                    Please Enter The Description
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-6 col-md-6 col-sm-8 col-8">
+                <label for="image" class="form-label">Upload New Picture</label>
+                <input type="file" name="image" class="form-control">
+                <div class="valid-feedback">
+                    Looks Great
+                </div>
+                <div class="invalid-feedback">
+                    Please Enter The Picture
+                </div>
+            </div>
+            <br>
+            <div class="row col-lg-8">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-8">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" name="price" value="<%= userData.price %>" class="form-control" required>
+                    <div class="valid-feedback">
+                        Looks Good 
+                    </div>
+                    <div class="invalid-feedback">
+                        Please Enter The Price
+                    </div>
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="col-lg-6 col-md-6 col-sm-8 col-8">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="location"  value="<%= userData.location %>" class="form-control" required>
+                    <div class="valid-feedback">
+                        Great Location
+                    </div>
+                    <div class="invalid-feedback">
+                        Please Enter The Location
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-6 col-md-6 col-sm-8 col-8">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" name="country" value="<%= userData.country %>" class="form-control" required>
+                <div class="valid-feedback">
+                    Lovely
+                </div>
+                <div class="invalid-feedback">
+                    Please Enter The Country
+                </div>
+            </div>
+            <br>
+            <div class="col-lg-6 col-md-6 col-sm-8 col-4">
+                <button type="submit" class="btn btn-add btn-dark col-lg-4 col-md-4 col-sm-4 col-12">Change</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
